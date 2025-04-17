@@ -3,8 +3,8 @@
 class Solution {
 
     /**
-     * @param Integer[] $prices
-     * @return Integer
+     * @param int[] $prices
+     * @return int
      */
 
     //  [3,2,1,6,8]
@@ -20,19 +20,19 @@ class Solution {
             if($prices[$i]<$min)
             {
                 $min =$prices[$i];
+
+            }
+            else{
+                $max=max($max,$prices[$i]- $min);
             }
         }
-
-
-        
-
-
-
-
-
+        var_dump($max);
+        return $max;
     }
+
+    
 }
-
-
+$solution = new Solution();
+$solution->maxProfit([1,4,6,2,9]);
 
 ?>
