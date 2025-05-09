@@ -1,28 +1,28 @@
 <?php
 
 class Solution {
-
-
-
-
     function isPalindrome($s) {
-        $reqex ='/[a-z0-9]/';
+        $regex = '/[a-z0-9]/';
         $s = strtolower($s);
-        preg_match_all($reqex, $s, $matches);
+        preg_match_all($regex, $s, $matches);
+        
         if (empty($matches[0])) {
             return true;
         }
-        $len = floor(count($matches[0]) / 2);
-        for ($i=0;$i<$len;$i++)
-        {
-            if($matches[0][$i] != $matches[0][$len - $i -1])
-            {
+        
+        $len = count($matches[0]);
+        for ($i = 0; $i < floor($len / 2); $i++) {
+            if ($matches[0][$i] != $matches[0][$len - 1 - $i]) {
                 return false;
             }
-            
-            return true;
         }
+        
+        return true; 
     }
 }
 
+$x =new Solution("carrace");
+print_r($x);
 ?>
+
+
