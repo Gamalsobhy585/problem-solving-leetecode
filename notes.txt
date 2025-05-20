@@ -1,0 +1,20 @@
+sort($nums); sorts the array $nums in ascending order.
+
+PHP_INT_MAX = 9223372036854775807 on 64 system bit 
+
+array_pop()
+Removes the last element of an array and returns it.
+
+
+array_push()
+Adds one or more elements to the end of an array.
+
+
+preg_match_all	
+Find all matches using regex and the output  in an array 
+
+
+
+
+
+
